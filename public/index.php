@@ -24,6 +24,10 @@
 
     <main>
         <h1>Test</h1>
+        <?php require_once('Smarty.class.php');
+        $smarty  = new Smarty();
+        $smarty->testInstall(); 
+        ?>
         <div class="container-fluid">
             <div class="row">
                 <?php
