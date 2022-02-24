@@ -24,16 +24,16 @@
 
     <main>
         <h1>Test</h1>
-        <?php require_once('Smarty.class.php');
-        $smarty  = new Smarty();
-        $smarty->testInstall(); 
-        ?>
         <div class="container-fluid">
             <div class="row">
                 <?php
             //Views will appear here
-            require_once('../app/init.php');
-            $app = new App;
+            //require_once('../app/init.php');
+            //$app = new App;
+
+            require_once('../vendor/smarty/smarty/libs/Smarty.class.php');
+            $smarty  = new Smarty();
+            $smarty->testInstall(); 
             ?>
             </div>
         </div>
