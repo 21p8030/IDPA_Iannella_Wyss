@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billetautomat</title>
+    <title>IDPA Wyss Iannella</title>
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/slate/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-idNH3UIOiZbCf8jxqu4iExnH34y5UovfW/Mg8T5WfNvoJolDvknoNqR69V2OexgF" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -28,12 +28,16 @@
             <div class="row">
                 <?php
             //Views will appear here
-            //require_once('../app/init.php');
-            //$app = new App;
-
             require_once('../vendor/smarty/smarty/libs/Smarty.class.php');
-            $smarty  = new Smarty();
-            $smarty->testInstall(); 
+            require_once('../app/init.php');
+            $app = new App;
+
+            // $view  = new Smarty();
+            // //$smarty->testInstall(); 
+            // $view->setTemplateDir(__DIR__.'/../app/views/');
+            // //echo __DIR__.'/../views/';
+            // //$view->assign('CategorysData', $CategorysData);
+            // $view->display('index.smarty');
             ?>
             </div>
         </div>
