@@ -13,7 +13,7 @@ Class kinematik extends Controller {
       $view = new Smarty();
       $view->setTemplateDir(__DIR__.'/../views/');
       $view->assign('title', "Kinematik");
-      $view->display('kinematik.smarty');
+      $view->display('ggb.smarty');
    }
    public function ggb(){
       $view = new Smarty();
