@@ -1,5 +1,12 @@
 {
     "require": {
-        "smarty/smarty": "^4.1"
+        "smarty/smarty": "^4.1",
+        "mathematicator-core/calculator": "^2.0",
+        "mathematicator-core/vizualizator": "^2.0"
+    },
+    "autoload": {
+        "smarty/smarty": "^4.1",
+        "mathematicator-core/calculator": "^2.0",
+        "mathematicator-core/vizualizator": "^2.0"
     }
 }
