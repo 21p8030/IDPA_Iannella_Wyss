@@ -62,6 +62,10 @@
         <td><input type="text" id="weg_s"/></td>
     </tr>
     <tr>
+        <th>Beschleunigung a:</th>
+        <td><input type="text" id="besch_a"/></td>
+    </tr>
+    <tr>
         <th>Verwendete Formel</th>
         <td><div id="used_formula"></div></td>
     </tr>

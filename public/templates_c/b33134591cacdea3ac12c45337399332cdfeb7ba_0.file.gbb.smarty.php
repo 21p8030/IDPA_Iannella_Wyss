@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-18 14:22:42
+/* Smarty version 4.1.0, created on 2022-06-18 14:23:54
   from 'C:\Users\Julien Wyss\Documents\IDPA\IDPA_Iannella_Wyss\app\views\gbb.smarty' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62adc392bfd421_10970195',
+  'unifunc' => 'content_62adc3da89c634_37210901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b33134591cacdea3ac12c45337399332cdfeb7ba' => 
     array (
       0 => 'C:\\Users\\Julien Wyss\\Documents\\IDPA\\IDPA_Iannella_Wyss\\app\\views\\gbb.smarty',
-      1 => 1655554961,
+      1 => 1655555032,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:integral.smarty' => 1,
   ),
 ),false)) {
-function content_62adc392bfd421_10970195 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62adc3da89c634_37210901 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -93,6 +93,10 @@ function content_62adc392bfd421_10970195 (Smarty_Internal_Template $_smarty_tpl)
     <tr>
         <th>Weg s:</th>
         <td><input type="text" id="weg_s"/></td>
+    </tr>
+    <tr>
+        <th>Beschleunigung a:</th>
+        <td><input type="text" id="besch_a"/></td>
     </tr>
     <tr>
         <th>Verwendete Formel</th>

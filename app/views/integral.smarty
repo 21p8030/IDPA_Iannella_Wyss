@@ -40,7 +40,7 @@
                     borderColor: '#ff7400',
                     data: []
                 }, {
-                    label: 'Rectangle rule',
+                    label: 'Ergebnis',
                     borderColor: changeBarChartColor().barBorderColors,
                     borderWidth: '2',
                     backgroundColor: changeBarChartColor().barColors,
