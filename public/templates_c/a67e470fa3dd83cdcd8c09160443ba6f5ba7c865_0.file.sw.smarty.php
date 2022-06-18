@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-17 17:17:52
+/* Smarty version 4.1.0, created on 2022-06-18 13:37:56
   from 'C:\Users\Julien Wyss\Documents\IDPA\IDPA_Iannella_Wyss\app\views\sw.smarty' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62ac9b2097c182_30153983',
+  'unifunc' => 'content_62adb914d73c48_49925384',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a67e470fa3dd83cdcd8c09160443ba6f5ba7c865' => 
     array (
       0 => 'C:\\Users\\Julien Wyss\\Documents\\IDPA\\IDPA_Iannella_Wyss\\app\\views\\sw.smarty',
-      1 => 1655479000,
+      1 => 1655552275,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:styles.smarty' => 1,
   ),
 ),false)) {
-function content_62ac9b2097c182_30153983 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62adb914d73c48_49925384 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -67,13 +67,16 @@ function content_62ac9b2097c182_30153983 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 <h2>Senkrechter Wurf</h2>
 <div class="flex_wrapper">
-    <div>Beim senkrechten Wurf unterscheidet man zwischen ab- und aufwärtsgerichteten senkrechten Wurf.<br>Beim abwärtsgerichteten senkrechten Wurf addiert man die Erdanziehung (g) zur Anfangsgeschwindigkeit (v0).</div>
+    <div>Beim senkrechten Wurf unterscheidet man zwischen ab- und aufwärtsgerichteten senkrechten Wurf.<br>Beim <strong>abwärtsgerichteten</strong> senkrechten Wurf <strong>addiert</strong> man die Erdanziehung (g) zur Anfangsgeschwindigkeit (v0).</div>
     <div style="margin-bottom: 20px;" id="GWZ"></div>
     <div style="margin-bottom: 20px;" id="tsv"></div>
     <div style="margin-bottom: 20px;" id="GWZ_"></div>
     <div style="margin-bottom: 20px;" id="svt"></div>
-    <div>Beim aufwärtsgerichteten senkrechten Wurf subtrahiert man die Erdanziehung (g) von der Anfangsgeschwindigkeit (v0).</div>
-
+    <div>Beim <strong>aufwärtsgerichteten</strong> senkrechten Wurf <strong>subtrahiert</strong> man die Erdanziehung (g) von der Anfangsgeschwindigkeit (v0).</div>
+    <div style="margin-bottom: 20px;" id="GWZ_2"></div>
+    <div style="margin-bottom: 20px;" id="tsv_2"></div>
+    <div style="margin-bottom: 20px;" id="GWZ2_2"></div>
+    <div style="margin-bottom: 20px;" id="svt_2"></div>
     <div>Man unterscheidet beim aufwärtsgerichteten senkrechten Wurf zwischen der Steigphase und der Fallphase, wobei die Steigphase die Phase bis zum Erreichen der maximalen Höhe bzw. zum Stillstand ist. Die Fallphase dauert bis zum Erreichen der Abwurfhöhe.</div>
 
     <div><br>Fallphase:<br>
@@ -115,6 +118,26 @@ function content_62ac9b2097c182_30153983 (Smarty_Internal_Template $_smarty_tpl)
   svt.appendChild(mj(math.parse(svt_formula).toTex({parenthesis: parenthesis})));
   GWZ2.innerHTML = '';
   GWZ2.appendChild(mj(math.parse(GWZ_formula).toTex({parenthesis: parenthesis})));
+
+  const GWZ_2 = document.getElementById('GWZ_2')
+  const GWZ2_2 = document.getElementById('GWZ2_2')
+  const tsv_2 = document.getElementById('tsv_2')
+  const svt_2 = document.getElementById('svt_2')
+  
+  var GWZ_formula_pretty_2 = "v=v0-g*t";
+  var GWZ_formula_2 = "h= v0  *t-  g/2  * t^2";
+  var tsv_formula_2 = "v= sqrt(v0^2-2 *g *h)";
+  var svt_formula_2 = "h=  (v+ v0)/2  *t";
+
+
+  GWZ_2.innerHTML = '';
+  GWZ_2.appendChild(mj(math.parse(GWZ_formula_pretty_2).toTex({parenthesis: parenthesis})));
+  tsv_2.innerHTML = '';
+  tsv_2.appendChild(mj(math.parse(tsv_formula_2).toTex({parenthesis: parenthesis})));
+  svt_2.innerHTML = '';
+  svt_2.appendChild(mj(math.parse(svt_formula_2).toTex({parenthesis: parenthesis})));
+  GWZ2_2.innerHTML = '';
+  GWZ2_2.appendChild(mj(math.parse(GWZ_formula_2).toTex({parenthesis: parenthesis})));
 
   myPlot = new Fooplot(document.getElementById('myPlot'));
   myPlot.reDraw();

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-18 13:41:04
+/* Smarty version 4.1.0, created on 2022-06-18 13:40:06
   from 'C:\Users\Julien Wyss\Documents\IDPA\IDPA_Iannella_Wyss\app\views\kb.smarty' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62adb9d09af9a6_50913570',
+  'unifunc' => 'content_62adb99693c7d7_88909473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fe3a6ff096e41f5eeb1d5b62ebc9d76e8038979' => 
     array (
       0 => 'C:\\Users\\Julien Wyss\\Documents\\IDPA\\IDPA_Iannella_Wyss\\app\\views\\kb.smarty',
-      1 => 1655552463,
+      1 => 1655552405,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:styles.smarty' => 1,
   ),
 ),false)) {
-function content_62adb9d09af9a6_50913570 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62adb99693c7d7_88909473 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -103,7 +103,7 @@ function content_62adb9d09af9a6_50913570 (Smarty_Internal_Template $_smarty_tpl)
   const svt = document.getElementById('svt')
   
   var GWZ_formula_pretty = "Winkelgeschwindigkeit (ω)=  (Winkel (∆φ))/(Zeit (∆t))";
-  var tsv_formula = "ω=  2π/T=2π *  1/T=2π *Frequenz (f)→in Hz bzw.  s^-1";
+  var tsv_formula = "ω=  2π/T=2π *  1/T=2π *Frequenz (f)→in Hz__bzw.  s^-1";
   //var tsv_formula = "t=s/v";
   var svt_formula = "v=  (Bogenweg (∆b))/t=spez.→  2πr/T=2πfr= ω *Radius (r)";
 

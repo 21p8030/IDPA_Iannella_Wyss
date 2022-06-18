@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-17 17:17:43
+/* Smarty version 4.1.0, created on 2022-06-18 14:22:42
   from 'C:\Users\Julien Wyss\Documents\IDPA\IDPA_Iannella_Wyss\app\views\gbb.smarty' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62ac9b17711d67_08224338',
+  'unifunc' => 'content_62adc392bfd421_10970195',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b33134591cacdea3ac12c45337399332cdfeb7ba' => 
     array (
       0 => 'C:\\Users\\Julien Wyss\\Documents\\IDPA\\IDPA_Iannella_Wyss\\app\\views\\gbb.smarty',
-      1 => 1655478944,
+      1 => 1655554961,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:integral.smarty' => 1,
   ),
 ),false)) {
-function content_62ac9b17711d67_08224338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62adc392bfd421_10970195 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -75,7 +75,7 @@ function content_62ac9b17711d67_08224338 (Smarty_Internal_Template $_smarty_tpl)
     <div style="margin-bottom: 20px;" id="bwz"></div>
     <div style="margin-bottom: 20px;" id="ast"></div>
     <div style="margin-bottom: 20px;" id="sat"></div>
-    <div style="margin-bottom: 20px;" id="tav"></div>
+    <div style="margin-bottom: 20px;" id="tva"></div>
     <div style="margin-bottom: 20px;" id="vst"></div>
 </div>
 <div class="wrapper">
@@ -145,20 +145,33 @@ function content_62ac9b17711d67_08224338 (Smarty_Internal_Template $_smarty_tpl)
 
   const bwz = document.getElementById('bwz')
   const ast = document.getElementById('ast')
-  const svt = document.getElementById('svt')
+  const sat = document.getElementById('sat')
+  const tva = document.getElementById('tva')
+  const vst = document.getElementById('vst')
   
-  var bwz_formula_pretty = "Beschleunigung (a)=  (Geschwindigkeitsveränderung (∆v))/(Zeit der Geschwindigkeitsveränderung v (∆t))";
-  var bwz_formula = "a=v/t";
-  var ast_formula = "t=s/v";
-  var svt_formula = "s=v*t";
+  var bwz_formula_pretty = "Beschleunigung (a)=  (Geschwindigkeitsveraenderung (v))/(Zeit der Geschwindigkeitsveraenderung v(t) )";
+  var ast_formula = "a=2s/t^2";
+  var avs_formula = "v^2/2s";
+  var sat_formula1 = "s=  1/2 at^2";
+  var sat_formula2 = "1/2 vt";
+  var sat_formula3 = "v^2/2a";
+  var tva_formula1 = "t=v/a";
+  var tva_formula2 = "2s/v";
+  var tva_formula3 = "sqrt(2s/a)";
+  var vst_formula1 = "v=  2s/t";
+  var vst_formula2 = "sqrt(2as)";
 
 
   bwz.innerHTML = '';
   bwz.appendChild(mj(math.parse(bwz_formula_pretty).toTex({parenthesis: parenthesis})));
   ast.innerHTML = '';
-  ast.appendChild(mj(math.parse(ast_formula).toTex({parenthesis: parenthesis})));
-  svt.innerHTML = '';
-  svt.appendChild(mj(math.parse(svt_formula).toTex({parenthesis: parenthesis})));
+  ast.appendChild(mj(math.parse(ast_formula).toTex({parenthesis: parenthesis}) + "=" + math.parse(avs_formula).toTex({parenthesis: parenthesis})));
+  sat.innerHTML = '';
+  sat.appendChild(mj(math.parse(sat_formula1).toTex({parenthesis: parenthesis}) + "=" + math.parse(sat_formula2).toTex({parenthesis: parenthesis}) + "=" + math.parse(sat_formula3).toTex({parenthesis: parenthesis})));
+  tva.innerHTML = '';
+  tva.appendChild(mj(math.parse(tva_formula1).toTex({parenthesis: parenthesis}) + "=" + math.parse(tva_formula2).toTex({parenthesis: parenthesis}) + "=" + math.parse(tva_formula3).toTex({parenthesis: parenthesis})));
+  vst.innerHTML = '';
+  vst.appendChild(mj(math.parse(vst_formula1).toTex({parenthesis: parenthesis}) + "=" + math.parse(vst_formula2).toTex({parenthesis: parenthesis})));
 
   myPlot = new Fooplot(document.getElementById('myPlot'));
   myPlot.reDraw();

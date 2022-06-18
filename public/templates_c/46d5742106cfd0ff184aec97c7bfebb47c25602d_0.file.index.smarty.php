@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-17 17:17:30
+/* Smarty version 4.1.0, created on 2022-06-18 13:14:47
   from 'C:\Users\Julien Wyss\Documents\IDPA\IDPA_Iannella_Wyss\app\views\index.smarty' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62ac9b0aac62f1_40037201',
+  'unifunc' => 'content_62adb3a7bd50f3_43345812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46d5742106cfd0ff184aec97c7bfebb47c25602d' => 
     array (
       0 => 'C:\\Users\\Julien Wyss\\Documents\\IDPA\\IDPA_Iannella_Wyss\\app\\views\\index.smarty',
-      1 => 1655479045,
+      1 => 1655550886,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:styles.smarty' => 1,
   ),
 ),false)) {
-function content_62ac9b0aac62f1_40037201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62adb3a7bd50f3_43345812 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -52,7 +52,66 @@ function content_62ac9b0aac62f1_40037201 (Smarty_Internal_Template $_smarty_tpl)
     </header>
 <h1><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </h1>
+<div class="flex_wrapper">
+Die drei Darstellungen der gebrochen rationalen Funktionen:
 
+<table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Besipielfunktion</th>
+                <th scope="col">Allgemein</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ausdividierte Form</td>
+                <td id="ausForm"></td>
+                <td id="ausFormAllg"></td>
+                <td>a(x) : Polynom, (Schiefe) Asymptote<br>
+                r(x): Resthyperbel</td>
+            </tr>
+            <tr>
+                <td>Bruchform</td>
+                <td id="Bruch1"></td>
+                <td id="Bruch2"></td>
+                <td>Z(x), N(x):Polynome</td>
+            </tr>
+            <tr>
+                <td>Bruchform</td>
+                <td id="Bruch3"></td>
+                <td id="Bruch4"></td>
+                <td>n : Zählergrad<br>
+                m : Nennergrad
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+    Bruchform → ausdividierte Form	:	Polynomdivision (mit Rest)<br>
+ausdividierte Form → Bruchform	:	gleichnamig machen<br></div>
+<div>Schiefe Asymptote: <div id="asymptote"></div></div>
+<table class="table table-hover">
+<thead>
+            <tr>
+                <th scope="col" colspan="2">Nullstellen des Zählers und Nenners (Bruchform)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>vom Zählen Z(x)<br>(und nicht gleichzeitig vom Nenner)</td>
+                <td >Nullstellen der Funktion</td>
+                
+            </tr>
+            <tr>
+                <td>vom Nenner N(x)<br>(und nicht gleichzeitig vom Zähler)</td>
+                <td>Definitionslücke<br>Polstellen<br>Polgeraden (senkrechte Asymptoten)</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
 <div class="wrapper">
     <div id="myPlot" style="width: 650px; height: 650px;"></div>
 
@@ -143,6 +202,38 @@ function content_62ac9b0aac62f1_40037201 (Smarty_Internal_Template $_smarty_tpl)
   const mj = function (tex) {
     return MathJax.tex2svg(tex, {em: 32, ex: 3, display: false});
   }
+
+  const ausFOm = document.getElementById('ausForm')
+  const ausFOmAllg = document.getElementById('ausFormAllg')
+  const Bruch1 = document.getElementById('Bruch1')
+  const Bruch2 = document.getElementById('Bruch2')
+  const Bruch3 = document.getElementById('Bruch3')
+  const Bruch4 = document.getElementById('Bruch4')
+  const asymptote = document.getElementById('asymptote')
+  
+  var asymptoteF = "y=a(x)";
+  var ausFo = "f(x)=x+2+2/(x-1)";
+  var ausFoAllg = "f(x)=a (x)  + r(x)";
+  var Bruch1F = "f(x)=a (x)  + r(x)";
+  var Bruch2F = "f(x)=  (Z(x))/(N(x))";
+  var Bruch3F = "f(x)=  (x(x+1))/(x-1)";
+  var Bruch4F = "f(x)=  (a_n x^n+ etc + a_1 x+a_0  )/(b_m x^m+ etc + b_1 x+b_0 )";
+
+
+  ausFOm.innerHTML = '';
+  ausFOm.appendChild(mj(math.parse(ausFo).toTex({parenthesis: parenthesis})));
+  ausFOmAllg.innerHTML = '';
+  ausFOmAllg.appendChild(mj(math.parse(ausFoAllg).toTex({parenthesis: parenthesis})));
+  Bruch1.innerHTML = '';
+  Bruch1.appendChild(mj(math.parse(Bruch1F).toTex({parenthesis: parenthesis})));
+  Bruch2.innerHTML = '';
+  Bruch2.appendChild(mj(math.parse(Bruch2F).toTex({parenthesis: parenthesis})));
+  Bruch3.innerHTML = '';
+  Bruch3.appendChild(mj(math.parse(Bruch3F).toTex({parenthesis: parenthesis})));
+  Bruch4.innerHTML = '';
+  Bruch4.appendChild(mj(math.parse(Bruch4F).toTex({parenthesis: parenthesis})));
+  asymptote.innerHTML = '';
+  asymptote.appendChild(mj(math.parse(asymptoteF).toTex({parenthesis: parenthesis})));
 
   function newton(func, int, Xn) {
       const table = document.getElementById("Nullstellen_Body");
