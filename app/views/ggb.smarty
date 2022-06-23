@@ -48,15 +48,15 @@
 
     <table>
     <tr>
-        <th>Geschwindigkeit v:</th>
+        <th>Geschwindigkeit v (in m/s):</th>
         <td><input type="text" id="geschw_v"/></td>
     </tr>
     <tr>
-        <th>Zeit t:</th>
+        <th>Zeit t (in s):</th>
         <td><input type="text" id="zeit_t"/></td>
     </tr>
     <tr>
-        <th>Weg s:</th>
+        <th>Weg s (in m):</th>
         <td><input type="text" id="weg_s"/></td>
     </tr>
     <tr>
