@@ -45,61 +45,6 @@
     <div style="margin-bottom: 20px;" id="tva"></div>
     <div style="margin-bottom: 20px;" id="vst"></div>
 </div>
-<div class="wrapper">
-    <div id="myPlot" style="width: 650px; height: 650px;"></div>
-
-    <table>
-    <tr>
-        <th>Geschwindigkeit v:</th>
-        <td><input type="text" id="geschw_v"/></td>
-    </tr>
-    <tr>
-        <th>Zeit t:</th>
-        <td><input type="text" id="zeit_t"/></td>
-    </tr>
-    <tr>
-        <th>Weg s:</th>
-        <td><input type="text" id="weg_s"/></td>
-    </tr>
-    <tr>
-        <th>Beschleunigung a:</th>
-        <td><input type="text" id="besch_a"/></td>
-    </tr>
-    <tr>
-        <th>Verwendete Formel</th>
-        <td><div id="used_formula"></div></td>
-    </tr>
-    <tr>
-        <th>Berechnen</th>
-        <td><button type="button" class="btn btn-success" onclick="GBB()">Berechnen</button></td>
-    </tr>
-    </table>
-</div>
-<div class="container">
-    <section class="container">
-    <label><span class="label-text">Integral eingeben f(x): </span><input class="input-cb" type="text"></label>
-    <fieldset>
-        <legend>Grenzen eingeben:</legend>       
-        <label><span class="label-text">Von: </span><input class="input-range-from" type="number"></label>
-        <label><span class="label-text">Bis: </span><input class="input-range-to" type="number"></label>
-    </fieldset>          
-    <label><span class="label-text">Schrittgrösse: </span><input class="input-step" type="number" value="0.01" step="0.1" min="0"></label>
-    <p class="error-message is-hidden"></p>
-    <button class="btn btn-success" id="btn">
-        Berechnen
-    </button><br>
-    <div class="results is-hidden">
-        <p class="result">Resultat:</p>
-        <p class="result-rect"></p>
-        <p class="result-trap"></p>
-    </div>
-    
-    </section>
-    <section class="chart-container">
-    <p class="chart-info is-hidden">Nur mit Numerischen sachen</p>
-    <canvas id="myChart"></canvas>
-    </section>
-</div>
 {literal}
 <script>
   const geschw_v = document.getElementById('geschw_v')
